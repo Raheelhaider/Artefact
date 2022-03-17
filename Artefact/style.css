@@ -1,0 +1,66 @@
+/* the CSS style has been created for stlie our webpage a required. */
+
+.navbar {
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+/* A jumbotron indicates a big box for calling extra attention to some special content or information. */
+.jumbotron {
+  background-color: #73b9fa;
+  background-size: cover;
+  padding: 128px;
+}
+/* Each heading has a default size. */
+.heading {
+  color: white;
+  font-size: 72px;
+}
+.heading-2 {
+  font-size: 24px;
+  margin-top: 28px;
+  font-weight: bold;
+}
+.img-item {
+  width: 100%;
+  height: 70%;
+}
+.par {
+  color: white;
+}
+
+.section-2 {
+  margin-top: 64px;
+}
+.section-products {
+  padding-top: 82px;
+  padding-left: 82px;
+  padding-right: 82px;
+  padding-bottom: 82;
+}
+
+.section-products-container {
+  margin-bottom: 82px;
+}
+.product-details {
+  padding: 128px;
+}
+.img-margains {
+  width: 500px;
+  height: auto;
+}

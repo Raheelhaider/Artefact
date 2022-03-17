@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!-- The declaration is not an HTML tag. It is an "information" to the browser about what document type to expect. -->
+<html lang="en">
+  <!-- Lang: To declare the language of the Web page. -->
+  <head>
+    <!-- Required meta tags- The <head> element is a container for metadata (data about data) and is placed between the <html> tag and the <body> tag. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap is an open-source and free framework used to build modern websites and web apps. It includes numerous HTML and CSS templates for UI elements,
+      including buttons and forms. Bootstrap also supports JavaScript extensions. -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap CSS -->
+    <!-- Title: defines a title in the browser toolbar -->
+    <title>Home Automation System</title>
+  </head>
+  <!-- The <body> tag defines the main content of the html document or the section that will visible on the website  -->
+  <body>
+    <!-- The HTML division tag, called "div" for short, is a special element that lets you group similar sets of content together on a web page. -->
+    <div class="container-fluid">
+      <div class="row">
+        <!--[Navbar]-->
+        <!--  nav: a section of a page whose purpose is to provide navigation links -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="index.html">Smart Home Automation System</a>
+          <!-- the button tag defines a clickable button. Iside the button you can put text. -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- The <li> HTML element is used to represent an item in a list.The top navigation bar displays a list of links such as Home, Product... -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="productdetail.html">Products Detail</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="register.html">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="results.html">Statistics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="controller.html">MicroBit Controller</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="demo.html">System Demo</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!--[Navbar Ends]-->
+        <div class="col-6 product-details">
+          <h1>Sign In / Register</h1>
+          <p>
+            In order to use many of the features on the Smart Home Automation
+            platform, you must be a registered user and sign in. To sign in,
+            click the Sign In button. To register, enter your e-mail address and
+            password, and click Sign Up.
+          </p>
+          <a class="btn btn-primary" href="register.html" role="button"
+            >Sign Up</a
+          >
+        </div>
+
+        <div
+          class="col-6 d-flex justify-content-center align-self-center"
+          style="margin-top: 64px"
+        >
+          <form id="myForm" class="form-horizontal" action="" method="POST">
+            <fieldset>
+              <div id="legend">
+                <legend class=""><h1>Sign In</h1></legend>
+              </div>
+              <div class="control-group">
+                <!-- Username -->
+                <label
+                  style="margin-top: 24px"
+                  class="control-label"
+                  for="username"
+                  >Username</label
+                >
+                <div class="controls">
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder=""
+                    class="input-xlarge"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="control-group">
+                <!-- Password-->
+                <!-- Label tag is used for caption. To use the text lable for the input tag -->
+                <!-- <input> elements of type password provide a way for the user to securely enter a password. -->
+                <!-- The element type password appears as a one-line plain text editor control that masks the content to prevent it from being seen, 
+                  commonly by placing an asterisk ("*") or a dot ("•") on each character.-->
+                <!-- The input placeholder attribute specifies a short hint that describes the expected value of an input field such as please fill in this field  -->
+                <label class="control-label" for="password">Password</label>
+                <div class="controls">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder=""
+                    class="input-xlarge"
+                    required
+                  />
+                </div>
+              </div>
+              <div style="margin-top: 16px" class="control-group">
+                <!--Use a wrapper element with class="form-check" to ensure proper margins for labels and checkboxes.
+                  Added the .form-check-label class to label elements, and "form-check-input" to style checkboxes properly. -->
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Remember Me
+                </label>
+                <!-- Button -->
+                <br />
+
+                <div class="controls">
+                  <button
+                    id="signin_btn"
+                    style="margin-top: 24px"
+                    class="btn btn-success"
+                  >
+                    Login
+                  </button>
+                  <br>
+                  <br>
+                  <h5>Forgotten your password</h5>
+                  <br>
+                   <!-- Email -->
+                   <label class="control-label" for="email">Email</label>
+                   <div class="controls">
+                     <input
+                       type="email"
+                       id="email"
+                       name="email"
+                       placeholder=""
+                       class="input-xlarge"
+                     />
+                   </div>
+                 </div>
+
+                  <button style="margin-top: 24px" class="btn btn-success"  id="reset_btn">
+                    Reset your password
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- The <footer> tag defines a footer for a document or section. The below code is inline CSS example -->
+    <footer style="position: absolute; bottom: 0; right: 0; left: 0;" class="page-footer font-small blue">
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3 mt-auto">
+        © Leaving Certificate Computer Science Project 2022
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <script type="text/javascript">
+      const reset = document.getElementById("reset_btn");
+      const submit = document.getElementById("signin_btn");
+      submit.addEventListener("click", varifaction);
+      reset.addEventListener("click", resetUser);
+
+      function resetUser(e) {
+        e.preventDefault();
+
+        var email = document.getElementById("email").value;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (email == "") {
+                  alert("Please enter your user email id"); //shows an alert if email field is not filled in. Alert displays message.
+                } else if (!filter.test(email)) {
+                  alert("Invalid email");
+                }else{
+                  alert("Email has been sent to your email. Please check your email.");
+                  document.getElementById("myForm").reset();
+
+                }
+       
+      }
+
+      function varifaction(e) {
+        e.preventDefault();
+
+        var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])/; //This line searches for a captial letter, lowercase letter and number in the password field for validation//
+        var user = document.getElementById("username").value;
+        var pas = document.getElementById("password").value;
+
+        // Validating user registration form fields and generating alert messages is performed within the if - else if loop.
+        if (user == "") {
+          alert("Please enter your userame"); //shows an alert if username field is not filled in. Alert displays message.
+        } else if (pas == "") {
+          alert("Please enter your password"); //shows an alert if password field is not filled in. Alert displays message.
+        } else if (!pwd_expression.test(pas)) {
+                  alert(
+                    "Upper case, Lower case, Special character and Numeric letter are required in Password filed" );
+         }else if ( document.getElementById("password").value.length < 6) {
+                  //Password length must be greater than 6. If not the case, an alert message will appear.
+                  // This code was added post-testing to make sure that the password must comply with the minimum requirements"
+                  alert("Password minimum length is 6");
+                } else if ( document.getElementById("password").value.length > 12 ) {
+                  //Password length must be less than 12. If not the case, alert message will appear.
+                  // This code was added post-testing to make sure that the password must comply with the minimum requirements"
+                  alert("Password max length is 12");
+                }   else {
+                    alert("Welcome!!");
+          // Redirecting to other page or webste code.
+          //the code entred post testing to redirect the the webiste to the main index page.
+          window.location = "index.html"; //The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.
+        }
+      }
+    </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script type="text/javascript" src="bootstrap.bundle.min.js"></script>
+  </body>
+</html>

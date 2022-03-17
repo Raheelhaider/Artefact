@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+  <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+ 
+    
+    <title>Smart Home Automation System</title>
+</head>
+ 
+<body>
+    <div class="container-fluid">
+        <div class="row">
+           
+                <!--[Navbar]-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="index.html">Smart Home Automation System</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse col-6" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="product.html">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="productdetail.html">Products Detail</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="register.html">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="results.html">Statistics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="controller.html">MicroBit Controller</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="demo.html">System Demo</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </nav>
+
+            <!--[Navbar Ends]-->
+            
+            <!--[jumbotron]-->
+            
+            <div class="">
+                <div class="container text-center" style="float: center;">
+                    <h1 class="heading">Temperature Results<br><span></h1>
+                        <h3 class="par" style="color: #000000;">Please click the On/Off Button to turn On and Off the device.<br>
+                        <br></h3>
+                       
+                    <a class="btn btn-primary" style="width: 300px;"  target="stats" onclick="turnOn()" role="button">Turn On</a>
+                    <a class="btn btn-primary" style="width: 300px;"  target="stats" onclick="turnOff()" role="button">Turn OFF</a>
+                        
+                </div>
+              </div>
+              
+            <!-- [jumbotron]-->
+            
+            <!--Columns-->
+            <div class="col-2">
+               
+            </div>
+            
+            <div class="col-8  section-2" style="text-align: center;">
+                <p class="par" style="color: #000000; text-align: center; vertical-align: middle; font-size:18px;">
+                    ThingSpeak is an IoT analytics platform service that allows you to collect, visualize, and analyze live data. 
+                    The graph below shows the temperature changes in its surroundings and sends the data to the analog IO in the microbit board. 
+                </p><br>
+                 <br>   
+                 <!-- ############################################################ -->
+                 <!-- this the source code . the data is being collected from the thingspeak.com to display the graph .... 
+                    ThingSpeak is IoT platform for user to gather real-time data; for instance, climate information, location data and other device data.    -->
+                 <!-- The inline frame (iframe) used to embed link, src: which Specifies the address of the thinspeak within the iframe-->
+                 
+                 <iframe id="stats" src="https://thingspeak.com/channels/1666843/charts/1?bgcolor=%23ffffff&color=%23d62020&days=2&dynamic=true&results=10&type=line"height="1200" width="450px" > 
+                <!-- old link... -->
+                <!-- <iframe id="stats" src="https://thingspeak.com/channels/1666843/widgets/428183"height="1200" width="450px"> </br> -->
+                    <!-- https://thingspeak.com/channels/1666843/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15 -->
+                    <!-- ############################################################ -->
+         <div>
+                        
+                    </div>
+                </iframe>
+            </div>
+            <div class="col-2  section-2">
+               
+            </div>
+
+        </div>
+    </div>
+<!-- ############################################################ -->
+<footer style="position: absolute; bottom: 0; right: 0; left: 0;" class="page-footer font-small blue">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 mt-auto">
+      © Leaving Certificate Computer Science Project 2022
+    </div>
+    <!-- Copyright -->
+  </footer>
+      <!-- ############################################################ -->
+<!-- the below script has been used to send data to the firbase database to chnage the value based on the on/off button. see above. -->
+      <script src="firebaseScript.js"></script>
+      <!-- ############################################################ -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- this to craete list while you minimize the screem. This will allow all the top navigation link to be apper on the side of the windoes as list   -->
+    <!-- The scrpit was added at the bottom, as once the page has been loaded then the scrpit will be executued -->
+    <script type="text/javascript" src="bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
